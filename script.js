@@ -35,12 +35,12 @@ let listQuestion = [];
 
 function checkType() {
     var type = document.getElementById('type').value;
-    if (type === 'Truy cập tự do') {
-        document.getElementById('start').disabled = true;
-        document.getElementById('end').disabled = true;
-    } else {
+    if (type === 'Thời gian cụ thể') {
         document.getElementById('start').disabled = false;
         document.getElementById('end').disabled = false;
+    } else {
+        document.getElementById('start').disabled = true;
+        document.getElementById('end').disabled = true;
     }
 }
 
