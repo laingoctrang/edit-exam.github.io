@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin kỳ thi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"/> -->
+    
+</head>
+
+<body>
+    <div class="edit-exam">
+        <div class="header">
+            <h3>Thông Tin Kỳ Thi</h3>
+            <i class="fa-solid fa-xmark" onclick="exit()"></i>
+        </div>
+
+        <form id="examForm">
+            <div class="form-group-container">
+                <div class="form-group">
+                    <label for="name">Tên kỳ thi:</label>
+                    <select id="name" name="name" class="select">
+                        <option value="" unselected hidden>Chọn tên kỳ thi</option>
+                        <option value="Luyện tập">Luyện tập</option>
+                        <option value="Giữa kỳ">Giữa kỳ</option>
+                        <option value="Cuối kỳ">Cuối kỳ</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="examName">Môn học:</label>
+                    <input type="text" id="subject" name="subject">
+                </div>
+
+                <div class="form-group">
+                    <label for="type">Loại kỳ thi:</label>
+                    <select id="type" name="type" class="select" onclick="checkType()">
+                        <option value="" unselected hidden>Chọn loại kỳ thi</option>
+                        <option value="Truy cập tự do">Truy cập tự do</option>
+                        <option value="Thời gian cụ thể">Thời gian cụ thể</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="duration">Thời gian làm bài (phút):</label>
+                    <input type="text" id="duration" name="duration">
+                </div>
+
+                <div class="form-group">
+                    <label for="start">Thời gian bắt đầu:</label>
+                    <input type="text" id="start" class="datetime-input" placeholder="Chọn thời gian bắt đầu">
+                </div>
+
+                <div class="form-group">
+                    <label for="end">Thời gian kết thúc:</label>
+                    <input type="text" id="end" class="datetime-input" placeholder="Chọn thời gian kết thúc">
+                </div>
+            </div>
+
+            <div class="question-form-group">
+                <label for="question">Danh sách câu hỏi:</label>
+                <div id="questionForm">
+                    <!-- Danh sách câu hỏi được thêm vào đây -->
+                </div>
+                <div class="function-btn">
+                    <button onclick="addQuestion()"><i class="fa-solid fa-plus"></i> Thêm câu hỏi</button>
+                    <button onclick="loadExcel()"><i class="fa-solid fa-file-arrow-up"></i> Nhập từ Excel</button>
+                    <input type="file" id="upload" accept=".xlsx, .xls" style="display: none;" />
+                </div>
+            </div>
+        </form>
+
+        <div class="btn-container">
+            <button type="submit" id="submitBtn">Lưu</button>
+            <button onclick="exit()">Thoát</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script> -->
+</body>
+
+</html>

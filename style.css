@@ -1,0 +1,203 @@
+:root {
+  --dark-red: #bb2019;
+  --white: #fff;
+  --gray: #ccc;
+  --light-gray: #dedede;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  transition: .2s linear;
+  /* background-color: #f4f4f4; */
+}
+
+input,
+select {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--gray);
+  border-radius: 5px;
+}
+
+input:disabled {
+  background-color: var(--gray);
+  border: 1px solid #999;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+select option {
+  font-size: 14px;
+}
+
+i {
+  font-size: 110%;
+  cursor: pointer;
+}
+
+.fa-trash:hover {
+  color: var(--dark-red);
+}
+
+/* .edit-exam {
+  max-width: 800px;
+  margin: 20px auto;
+  border: 1px solid var(--gray);
+  border-radius: 5px;
+  background-color: var(--white);
+} */
+
+.edit-exam .header {
+  background-color: var(--dark-red);
+  color: var(--white);
+  padding: 0 30px;
+  /* border-radius: 5px 5px 0 0; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.edit-exam #examForm label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.edit-exam #examForm {
+  padding: 30px;
+}
+
+.edit-exam #examForm .form-group-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.edit-exam #examForm .form-group-container .form-group {
+  padding: .5%;
+  flex-basis: 49%;
+  margin-bottom: 10px;
+}
+
+.edit-exam #examForm .question-form-group #questionForm {
+  margin-bottom: 20px;
+  padding: 20px;
+  padding-bottom: 0;
+  border: 1px solid var(--gray);
+  border-radius: 5px;
+}
+
+.edit-exam #examForm .question-form-group #questionForm label {
+  display: flex;
+}
+
+.edit-exam #examForm .question-form-group #questionForm .question-header-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.edit-exam #examForm .question-form-group #questionForm .question-input {
+  margin-bottom: 10px;
+}
+
+.edit-exam #examForm .question-form-group #questionForm .answer-options {
+  padding-bottom: 10px;
+}
+
+.edit-exam #examForm .question-form-group #questionForm .answer-options .form-answer-options {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.edit-exam #examForm .question-form-group #questionForm .answer-options .form-answer-options label {
+  margin-right: 10px;
+}
+
+.edit-exam #examForm .question-form-group #questionForm .answer-options .form-answer-options .answer-option {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.edit-exam #examForm .function-btn {
+  display: flex;
+  gap: 1%;
+}
+
+.edit-exam #examForm .function-btn button {
+  width: 100%;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: var(--dark-red);
+  background-color: var(--white);
+  border: 1px solid var(--dark-red);
+  border-radius: 5px;
+}
+
+.edit-exam #examForm .function-btn button:hover {
+  color: var(--white);
+  background-color: var(--dark-red);
+}
+
+.edit-exam .btn-container {
+  display: flex;
+  gap: 10px;
+  justify-content: right;
+  margin: 0 30px 20px 0;
+}
+
+.edit-exam .btn-container button {
+  box-sizing: border-box;
+  padding: 10px;
+  display: block;
+  width: 10%;
+  background-color: var(--dark-red);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.edit-exam .btn-container button:hover {
+  text-decoration: underline;
+}
+
+.notification {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #eee;
+  padding: 20px 40px;
+  border-left: 4px solid green;
+  border-radius: 5px;
+  z-index: 1000;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.notification i {
+  color: green;
+  font-size: 150%;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
